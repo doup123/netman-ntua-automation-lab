@@ -25,7 +25,7 @@ with manager.connect(host = 'ROUTER_IP_ADDRESS',
                      hostkey_verify = False,allow_agent=False) as m:
     # ADD YOUR CODE HERE FOR MULTIPLE LOOPBACKS
     # Create desired NETCONF config payload and <edit-config>
-    config = config_data.format(int_name = "GigabitEthernet2")
+    config = config_data.format(int_name = "Loopback1")
     r = m.get_config("running", config)
     sleep(2)
     xml_doc = minidom.parseString(r.xml)
